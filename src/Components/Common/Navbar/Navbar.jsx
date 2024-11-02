@@ -4,7 +4,6 @@ function Navbar() {
   return (
     <div className="mt-4 mb-14 max-w-[1170px] mx-auto">
       <div className="navbar bg-base-100">
-        {/* Navbar Start */}
         <div className="navbar-start">
           <div className="dropdown">
             <button tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -28,17 +27,20 @@ function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <NavLink
-                to="/"
+                to="/home"
                 className={({ isActive }) =>
-                  isActive ? 'text-[#23BE0A] font-bold' : 'font-bold'
-                }
-              >
+                  isActive ? 'text-[#23BE0A] font-bold' : 'font-bold hover:text-[#23BE0A]'
+                }>
                 Home
               </NavLink>
-              <NavLink to="/listedbooks" className="font-bold">
+              <NavLink to="/listedbooks" className={({ isActive }) =>
+                  isActive ? 'text-[#23BE0A] font-bold' : 'font-bold hover:text-[#23BE0A]'
+                }>
                 Listed Books
               </NavLink>
-              <NavLink to="/pagestoread" className="font-bold">
+              <NavLink to="/pagestoread" className={({ isActive }) =>
+                  isActive ? 'text-[#23BE0A] font-bold' : 'font-bold hover:text-[#23BE0A]'
+                }>
                 Pages to Read
               </NavLink>
             </ul>
@@ -46,29 +48,35 @@ function Navbar() {
           <a className="text-xl sm:text-4xl font-black">Book Vibe</a>
         </div>
 
-        {/* Navbar Center */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 flex gap-6 items-center">
             <NavLink
-              to="/"
+              to="/home"
               className={({ isActive }) =>
                 isActive
                   ? 'text-[#23BE0A] font-bold border border-[#23BE0A] rounded-lg p-3'
-                  : 'font-normal p-3'
+                  : 'font-normal p-3 hover:text-[#23BE0A]'
               }
             >
               Home
             </NavLink>
-            <NavLink to="/listedbooks" className="font-normal p-3">
+            <NavLink to="/listedbooks" className={({ isActive }) =>
+                isActive
+                  ? 'text-[#23BE0A] font-bold border border-[#23BE0A] rounded-lg p-3'
+                  : 'font-normal p-3 hover:text-[#23BE0A]'
+              }>
               Listed Books
             </NavLink>
-            <NavLink to="/pagestoread" className="font-normal p-3">
+            <NavLink to="/pagestoread" className={({ isActive }) =>
+                isActive
+                  ? 'text-[#23BE0A] font-bold border border-[#23BE0A] rounded-lg p-3'
+                  : 'font-normal p-3 hover:text-[#23BE0A]'
+              }>
               Pages to Read
             </NavLink>
           </ul>
         </div>
 
-        {/* Navbar End */}
         <div className="navbar-end flex gap-4">
           <button className="btn bg-[#23BE0A] text-white">Sign In</button>
           <button className="btn bg-[#59C6D2] text-white">Sign Up</button>
