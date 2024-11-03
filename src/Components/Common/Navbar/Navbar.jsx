@@ -27,20 +27,27 @@ function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <NavLink
-                to="/home"
+                to="/"
                 className={({ isActive }) =>
                   isActive ? 'text-[#23BE0A] font-bold' : 'font-bold hover:text-[#23BE0A]'
-                }>
+                }
+              >
                 Home
               </NavLink>
-              <NavLink to="/listedbooks" className={({ isActive }) =>
+              <NavLink
+                to="/listedbooks"
+                className={({ isActive }) =>
                   isActive ? 'text-[#23BE0A] font-bold' : 'font-bold hover:text-[#23BE0A]'
-                }>
+                }
+              >
                 Listed Books
               </NavLink>
-              <NavLink to="/pagestoread" className={({ isActive }) =>
+              <NavLink
+                to="/pagestoread"
+                className={({ isActive }) =>
                   isActive ? 'text-[#23BE0A] font-bold' : 'font-bold hover:text-[#23BE0A]'
-                }>
+                }
+              >
                 Pages to Read
               </NavLink>
             </ul>
@@ -51,7 +58,7 @@ function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 flex gap-6 items-center">
             <NavLink
-              to="/home"
+              to="/"
               className={({ isActive }) =>
                 isActive
                   ? 'text-[#23BE0A] font-bold border border-[#23BE0A] rounded-lg p-3'
@@ -60,18 +67,24 @@ function Navbar() {
             >
               Home
             </NavLink>
-            <NavLink to="/listedbooks" className={({ isActive }) =>
+            <NavLink
+              to="/listedbooks"
+              className={({ isActive }) =>
                 isActive
                   ? 'text-[#23BE0A] font-bold border border-[#23BE0A] rounded-lg p-3'
                   : 'font-normal p-3 hover:text-[#23BE0A]'
-              }>
+              }
+            >
               Listed Books
             </NavLink>
-            <NavLink to="/pagestoread" className={({ isActive }) =>
+            <NavLink
+              to="/pagestoread"
+              className={({ isActive }) =>
                 isActive
                   ? 'text-[#23BE0A] font-bold border border-[#23BE0A] rounded-lg p-3'
                   : 'font-normal p-3 hover:text-[#23BE0A]'
-              }>
+              }
+            >
               Pages to Read
             </NavLink>
           </ul>
