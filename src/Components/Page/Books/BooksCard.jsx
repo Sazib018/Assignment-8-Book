@@ -18,7 +18,7 @@ const BooksCard = ({ books }) => {
             <figure className="bg-[#F3F3F3] rounded-2xl flex justify-center items-center w-full h-[180px] sm:h-[200px] md:h-[250px] overflow-hidden">
                 <img
                     src={image}
-                    alt="Book Cover"
+                    alt=""
                     className="w-full h-full object-cover rounded-lg"
                 />
             </figure>

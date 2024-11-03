@@ -1,13 +1,16 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 const BookDetails = () => {
-    const { id } = useParams();
+   
+    const details = useLoaderData()
+    console.log(details);
 
-
+    
+    
     return (
         <div>
-             hellow
+        lkjh
         </div>
     );
 };
