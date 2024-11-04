@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 
 const ListedBooks = () => {
     const [readBooks, setReadBooks] = useState([]);
+    console.log(readBooks);
     const [wishlistBooks, setWishlistBooks] = useState([]);
+    console.log(wishlistBooks);
+    
     const [activeTab, setActiveTab] = useState('read');
     const [sortOption, setSortOption] = useState('rating');
 
