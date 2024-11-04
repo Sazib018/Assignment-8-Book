@@ -3,11 +3,11 @@ import { LuStar } from 'react-icons/lu';
 import { useNavigate } from 'react-router-dom';
 
 const BooksCard = ({ books }) => {
-    const { id, image, tags, bookName, author, category, rating } = books;
+    const { bookId, image, tags, bookName, author, category, rating } = books;
     const navigate = useNavigate();
 
     const handleCardClick = () => {
-        navigate(`/book/${id}`);
+        navigate(`/book/${bookId}`);
     };
 
     return (

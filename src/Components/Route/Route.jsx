@@ -5,6 +5,7 @@ import BookDetails from '../Page/Books/BookDetails';
 
 
 
+
 export const route = createBrowserRouter([
     {
       path: '/',
@@ -12,13 +13,15 @@ export const route = createBrowserRouter([
       children:[
      {
       path: '/',
-      element: <Home/>
+      element: <Home/>,
+    
      },
      {
       path: '/book/:bookId',
-      element:<BookDetails></BookDetails>,
-      loader: () => fetch("booksData.json")
+      element: <BookDetails></BookDetails>,
+      loader: ()=> fetch("booksData.json") 
      },
+    
       ]
     },
     
