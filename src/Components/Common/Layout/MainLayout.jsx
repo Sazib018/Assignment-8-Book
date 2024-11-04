@@ -8,7 +8,7 @@ const MainLayout = () => {
             <div>
                 <Navbar></Navbar>
             </div>
-                
+        
             <Outlet></Outlet>
         </div>
     );

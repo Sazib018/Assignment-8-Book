@@ -50,10 +50,27 @@ function Navbar() {
               >
                 Pages to Read
               </NavLink>
+              <NavLink
+                to="/Learning"
+                className={({ isActive }) =>
+                  isActive ? 'text-[#23BE0A] font-bold' : 'font-bold hover:text-[#23BE0A]'
+                }
+              >
+                Learning
+              </NavLink>
+              <NavLink
+                to="/Reading"
+                className={({ isActive }) =>
+                  isActive ? 'text-[#23BE0A] font-bold' : 'font-bold hover:text-[#23BE0A]'
+                }
+              >
+               Reading
+              </NavLink>
             </ul>
           </div>
           <a className="text-xl sm:text-4xl font-black">Book Vibe</a>
         </div>
+
 
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 flex gap-6 items-center">
@@ -86,6 +103,26 @@ function Navbar() {
               }
             >
               Pages to Read
+            </NavLink>
+            <NavLink
+              to="/ Learning"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-[#23BE0A] font-bold border border-[#23BE0A] rounded-lg p-3'
+                  : 'font-normal p-3 hover:text-[#23BE0A]'
+              }
+            >
+               Learning
+            </NavLink>
+            <NavLink
+              to="/ Reading"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-[#23BE0A] font-bold border border-[#23BE0A] rounded-lg p-3'
+                  : 'font-normal p-3 hover:text-[#23BE0A]'
+              }
+            >
+               Reading
             </NavLink>
           </ul>
         </div>
