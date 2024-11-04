@@ -29,10 +29,10 @@ export const route = createBrowserRouter([
       loader: ()=> fetch("booksData.json") 
      },
      {
-      path: '/Listed Books',
-      element:<ListedBooks></ListedBooks> ,
-      loader: ()=> fetch("booksData.json") 
-     },
+      path: "/listedbooks",
+      element: <ListedBooks />,
+      loader: () => Promise.resolve("booksData.json"), // or load from JSON
+  },
      {
       path: '*',
       element: <NotFound/>,
