@@ -1,12 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import ListedLayouts from '../../Common/Layout/ListedLayouts';
 
 const ListedBooks = () => {
     const [readBooks, setReadBooks] = useState([]);
-    console.log(readBooks);
+    // console.log(readBooks);
     const [wishlistBooks, setWishlistBooks] = useState([]);
-    console.log(wishlistBooks);
+    // console.log(wishlistBooks);
     
+
+    // all Books Data
+    const booksData = useLoaderData()
+
+    // read books datas   
+    // const readDatas = booksData.filter(book => readBooks.includes(book.bookId))
+
+    // wishList books datas
+    // const wishDatas = booksData.filter(book => wishlistBooks.includes(book.bookId))
+    
+    
+    
+    
+
     const [activeTab, setActiveTab] = useState('read');
     const [sortOption, setSortOption] = useState('rating');
 
@@ -31,6 +46,8 @@ const ListedBooks = () => {
 
     const displayedBooks = activeTab === 'read' ? sortBooks(readBooks) : sortBooks(wishlistBooks);
 
+
+
     return (
         <div className="p-4 max-w-[1170px] mx-auto">
             <div className='text-center mb-4'>
@@ -47,7 +64,8 @@ const ListedBooks = () => {
                 </div>
             </div>
 
-            <div className=" space-x-4 mb-4">
+<ListedLayouts></ListedLayouts>
+            {/* <div className=" space-x-4 mb-4">
                 <button
                     onClick={() => setActiveTab('read')}
                     className={` text-xl hover:text-green-600 ${activeTab === 'read' ? 'active' : ''}`}>
@@ -62,7 +80,7 @@ const ListedBooks = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-                {displayedBooks.map((book) => (
+                {readDatas?.map((book) => (
                     <div key={book.bookId} className="border p-4 rounded transition-transform transform hover:scale-105">
                         <img src={book.image} alt={book.bookName} className="h-40 w-full object-cover mb-2" />
                         <h2 className="font-semibold">{book.bookName}</h2>
@@ -76,7 +94,7 @@ const ListedBooks = () => {
                         <Link to={`/book-details/${book.bookId}`} className="text-blue-500">View Details</Link>
                     </div>
                 ))}
-            </div>
+            </div> */}
         </div>
     );
 };
