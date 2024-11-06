@@ -11,19 +11,17 @@ export const route = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <NotFound></NotFound>,
     children: [
       {
         path: '/',
         element: <Home />,
       },
-      {
-        path: '/learning',
-        element: <NotFound />,
-      },
-      {
+     
+      /* {
         path: '/reading',
         element: <NotFound />,
-      },
+      }, */
 
       {
         path: '/book/:bookId',
@@ -46,10 +44,7 @@ export const route = createBrowserRouter([
           }
         ]
       },
-      {
-        path: '*',
-        element: <NotFound />,
-      },
+      
 
     ]
   },
